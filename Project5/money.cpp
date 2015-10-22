@@ -1,23 +1,31 @@
 #include "money.h"
 #include "character.h"
 
+class Character;
+
+//////////////////////////////////////////////////////////////////////////
+//////						증가 값, 대상								//////
+//////////////////////////////////////////////////////////////////////////
 void Money::incMoney(int moneyValue, int Who) {
 
 	if (Who == -1) {
 		me.wallet(INCOME, moneyValue);
 	} else {
-		Character chara(Who);
-		chara.wallet(INCOME, moneyValue);
+		Character cha(Who);
+		cha.wallet(INCOME, moneyValue);
 	}
 }
 
+//////////////////////////////////////////////////////////////////////////
+//////						감소 값, 대상								//////
+//////////////////////////////////////////////////////////////////////////
 void Money::decMoney(int moneyValue, int Who) {
 
 	if (Who == -1) {
 		Character me(-1);
 		me.wallet(OUTGOINGS, moneyValue);
 	} else {
-		Character chara(Who);
-		chara.wallet(OUTGOINGS, moneyValue);
+		Character cha(Who);
+		cha.wallet(OUTGOINGS, moneyValue);
 	}
 }

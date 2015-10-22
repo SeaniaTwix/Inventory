@@ -10,8 +10,5 @@ typedef enum {
 
 void initScreen();
 
-namespace CHARALIST {
-	extern std::vector<int> chara;
-}
-
-extern Character me(-1);
+extern std::vector<int> chara;
+// me (플레이어 자신)은 유일하기 때문에 전역 처리.

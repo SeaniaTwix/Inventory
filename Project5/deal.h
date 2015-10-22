@@ -1,9 +1,10 @@
 #pragma once
+#include "character.h"
 
-class Deal {
+class Deal : public Character {
 public:
-	void Sell(Character toWho, int itemId);
-	void Buy(Character byWho, int itemId);
+	void Sell(int toWho, int itemId);
+	void Buy(int byWho, int itemId);
 	int getPrice(int itemId);
 private:
 

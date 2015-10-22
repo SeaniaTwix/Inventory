@@ -10,11 +10,9 @@
 void getInputState();
 void showNpcNameList();
 
-// extern int money = 1000;
-
 int main() {
 
-	//npc.inputItem();
+	Character me(-1);
 
 	/*
 	Inventory inven;
@@ -45,19 +43,22 @@ void getInputState() {
 	Deal deal;
 
 	wchar_t c = _getwch();
+
+
+	int input;
+	/* Npc 목록 호출 */
+	showNpcNameList();
+	std::cout << std::string("-", 20);
+	std::cout << "누구와 거래하시겠습니까?";
+	std::cin >> input;
+	std::cout << std::endl;
+
+
 	switch (c) {
 	case 'q': // quit
 		exit(__QUIT__);
 		break;
 	case 'b': // buy
-		int input;
-		/* Npc 목록 호출 */
-		showNpcNameList();
-		std::cout << "누구와 거래하시겠습니까?";
-		std::cin >> input;
-		std::cout << std::endl;
-
-
 		break;
 	case 's': // sell
 		//do something

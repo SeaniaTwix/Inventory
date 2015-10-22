@@ -3,6 +3,7 @@
 #include <string>
 #include "system.h"
 #include "inventory.h"
+#include "system.h"
 
 class Character : public Inventory {
 public:
@@ -19,9 +20,7 @@ private:
 
 Character::Character(int aId) {
 	thisId = aId;
-	{ using namespace CHARALIST;
-	chara.push_back(thisId);
-	}
+	chara.push_back(this->thisId);
 }
 
 Character::~Character() {

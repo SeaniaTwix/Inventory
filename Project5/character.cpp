@@ -4,6 +4,21 @@
 
 std::map<int, std::string> nameList();
 
+// 엔피시 목록 자료 구하기
+//std::vector<int> getNpcList() {
+//	using namespace CHARALIST;
+//	return chara;
+//}
+
+// 엔피시 목록 구하기
+void showNpcNameList() {
+	std::map<int, std::string>::iterator it;
+
+	for (it = nameList().begin(); it != nameList().end(); ++it) {
+		std::cout << (*it).first << ". " << (*it).second << std::endl;
+	}
+}
+
 void Character::wallet(UseType type, int aMoney) {
 	if (type == OUTGOINGS) {
 		this->money -= aMoney;
