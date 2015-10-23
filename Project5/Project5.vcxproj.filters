@@ -27,9 +27,6 @@
     <ClCompile Include="system.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="npc.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="money.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -54,9 +51,6 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="system.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="npc.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="money.h">

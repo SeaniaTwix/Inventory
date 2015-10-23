@@ -124,7 +124,6 @@
     <ClCompile Include="inventory.cpp" />
     <ClCompile Include="items.cpp" />
     <ClCompile Include="money.cpp" />
-    <ClCompile Include="npc.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="system.cpp" />
   </ItemGroup>
@@ -134,7 +133,6 @@
     <ClInclude Include="inventory.h" />
     <ClInclude Include="items.h" />
     <ClInclude Include="money.h" />
-    <ClInclude Include="npc.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="system.h" />
   </ItemGroup>
