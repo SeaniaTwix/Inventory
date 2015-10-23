@@ -1,9 +1,6 @@
 #pragma once
-#include "inventory.h"
 #include "money.h"
 #include "character.h"
-
-Player me;
 
 class Player : public Character {
 public:

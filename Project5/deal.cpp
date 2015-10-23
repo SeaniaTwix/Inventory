@@ -1,9 +1,7 @@
 #include "deal.h"
 #include "items.h"
-#include "money.h"
-#include "inventory.h"
-#include "system.h"
 #include "player.h"
+#include "character.h"
 
 // 인자로 받은 itemId를 toWho의 인벤토리에 넣고, 실행한 측의 인벤토리에선 삭제해야 함. 아이템의 가격이 설정된 함수를 불러 toWho의 money에서 빼야함.
 void Deal::Sell(Character* toWho, int itemId) {

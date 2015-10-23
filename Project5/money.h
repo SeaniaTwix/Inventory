@@ -1,5 +1,4 @@
 #pragma once
-#include "character.h"
 
 class Money {
 public:

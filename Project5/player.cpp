@@ -56,24 +56,26 @@ void getInputState() {
 	cha.setID(input);
 	int charaNums = cha.retID();
 
+	c = '\0';
+
 	switch (c) {
 	case 'q': // quit
 		exit(__QUIT__);
 		break;
 	case 'b': // buy
-
+		int ba;
 		cha.printInventory();
 		std::cout << "무얼 살까? (앞에 있는 번호를 쓰자)" << std::endl;
-		int c = _getwch();
-		deal.Buy(&cha, c);
+		std::cin >> ba;
+		deal.Buy(&cha, ba);
 
 		break;
 	case 's': // sell
-		
+		int sa;
 		me.printInventory();
 		std::cout << "무얼 팔까? (앞에 있는 번호를 쓰자)" << std::endl;
-		int c = _getwch();
-		deal.Sell(&cha, c);
+		std::cin >> sa;
+		deal.Sell(&cha, sa);
 
 		break;
 	default:
