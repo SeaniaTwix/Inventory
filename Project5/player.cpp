@@ -1,15 +1,8 @@
 #include <wchar.h>
 #include <iostream>
-#include "items.h"
 #include "deal.h"
 #include "system.h"
-#include "npc.h"
 #include "player.h"
-
-#define __QUIT__ 0
-
-void getInputState();
-void showNpcNameList();
 
 int main() {
 
@@ -65,6 +58,7 @@ void getInputState() {
 	case 'b': // buy
 		int ba;
 		cha.printInventory();
+		// 아직 목록 순서에 대응하는 코드가 없음
 		std::cout << "무얼 살까? (앞에 있는 번호를 쓰자)" << std::endl;
 		std::cin >> ba;
 		deal.Buy(&cha, ba);
@@ -73,6 +67,7 @@ void getInputState() {
 	case 's': // sell
 		int sa;
 		me.printInventory();
+		// 아직 목록 순서에 대응하는 코드가 없음
 		std::cout << "무얼 팔까? (앞에 있는 번호를 쓰자)" << std::endl;
 		std::cin >> sa;
 		deal.Sell(&cha, sa);

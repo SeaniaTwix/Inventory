@@ -3,9 +3,7 @@
 
 #include <Windows.h>
 #include <vector>
-#include "character.h"
-
-
+//#include "character.h"
 
 void initScreen();
 

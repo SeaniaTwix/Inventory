@@ -5,7 +5,6 @@
 #include <string>
 #include "system.h"
 #include "inventory.h"
-#include "system.h"
 #include "money.h"
 
 typedef enum {
@@ -15,8 +14,8 @@ typedef enum {
 
 class Character : public Inventory, public Money {
 public:
-	Character();
-	~Character();
+	//Character();
+	//~Character();
 	std::string name;
 	void wallet(UseType type, int aMoney);
 	void setID(int id);
@@ -28,9 +27,9 @@ private:
 	//std::vector<int> storage;
 };
 
-Character::Character() {
-}
-
-Character::~Character() {
-}
+//Character::Character() {
+//}
+//
+//Character::~Character() {
+//}
 #endif
