@@ -3,8 +3,8 @@
 
 class Deal {
 public:
-	void Sell(int toWho, int itemId);
-	void Buy(int byWho, int itemId);
+	void Sell(Character* toWho, int itemId);
+	void Buy(Character* byWho, int itemId);
 	int getPrice(int itemId);
 private:
 

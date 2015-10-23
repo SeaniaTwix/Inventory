@@ -4,6 +4,7 @@
 #include "deal.h"
 #include "system.h"
 #include "npc.h"
+#include "player.h"
 
 #define __QUIT__ 0
 
@@ -11,8 +12,6 @@ void getInputState();
 void showNpcNameList();
 
 int main() {
-
-	Character me;
 
 	/*
 	Inventory inven;
@@ -53,15 +52,29 @@ void getInputState() {
 	std::cin >> input;
 	std::cout << std::endl;
 
+	Character cha;
+	cha.setID(input);
+	int charaNums = cha.retID();
 
 	switch (c) {
 	case 'q': // quit
 		exit(__QUIT__);
 		break;
 	case 'b': // buy
+
+		cha.printInventory();
+		std::cout << "무얼 살까? (앞에 있는 번호를 쓰자)" << std::endl;
+		int c = _getwch();
+		deal.Buy(&cha, c);
+
 		break;
 	case 's': // sell
-		//do something
+		
+		me.printInventory();
+		std::cout << "무얼 팔까? (앞에 있는 번호를 쓰자)" << std::endl;
+		int c = _getwch();
+		deal.Sell(&cha, c);
+
 		break;
 	default:
 		std::cout << "ERR! 잘못된 명령입니다" << std::endl;

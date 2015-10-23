@@ -18,6 +18,7 @@ public:
 	std::string name;
 	void wallet(UseType type, int aMoney);
 	void setID(int id);
+	int retID();
 	std::string nameCard(int thisId);
 private:
 	//int money;
