@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __MONEY_H__
+#define __MONEY_H__
 
 class Money {
 public:
@@ -8,3 +9,4 @@ protected:
 	int money;
 private:
 };
+#endif

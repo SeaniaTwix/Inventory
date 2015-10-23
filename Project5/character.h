@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CHARACTER_H__
+#define __CHARACTER_H__
+
 #include <vector>
 #include <string>
 #include "system.h"
@@ -31,3 +33,4 @@ Character::Character() {
 
 Character::~Character() {
 }
+#endif

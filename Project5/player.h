@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __PLAYER_H__
+#define __PLAYER_H__
 #include "money.h"
 #include "character.h"
 
@@ -11,3 +12,4 @@ public:
 private:
 	int thisId;
 };
+#endif

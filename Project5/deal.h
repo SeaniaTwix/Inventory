@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __DEAL_H__
+#define __DEAL_H__
 #include "character.h"
 
 class Deal {
@@ -9,3 +10,4 @@ public:
 private:
 
 };
+#endif

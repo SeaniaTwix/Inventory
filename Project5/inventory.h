@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __INVECTORY_H__
+#define __INVECTORY_H__
+
 #include <iostream>
 #include <vector>
 #include <conio.h>
@@ -14,3 +16,4 @@ private:
 	//int nInit = 0;
 	//std::vector<int> getInvList();
 };
+#endif
