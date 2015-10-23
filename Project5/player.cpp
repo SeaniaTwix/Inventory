@@ -12,7 +12,7 @@ void showNpcNameList();
 
 int main() {
 
-	Character me(-1);
+	Character me;
 
 	/*
 	Inventory inven;

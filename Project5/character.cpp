@@ -32,6 +32,10 @@ void Character::wallet(UseType type, int aMoney) {
 	}
 }
 
+void Character::setID(int id) {
+	this->thisId = id;
+}
+
 std::string Character::nameCard(int aId) {
 	return nameList()[aId];
 }

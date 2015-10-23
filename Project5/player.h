@@ -1,8 +1,13 @@
 #pragma once
 #include "inventory.h"
+#include "money.h"
 
-class Player : public Inventory {
+class Player : public Character {
 public:
-	int playerMoney;
+	Player(int thisId) {
+		thisId = -1;
+	}
+	//int playerMoney;
 private:
+	int thisId;
 };

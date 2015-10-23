@@ -4,23 +4,28 @@
 #include "system.h"
 #include "inventory.h"
 #include "system.h"
+#include "money.h"
 
-class Character : public Inventory {
+typedef enum {
+	OUTGOINGS,
+	INCOME
+} UseType;
+
+class Character : public Inventory, public Money {
 public:
-	Character(int aId);
+	Character();
 	~Character();
 	std::string name;
 	void wallet(UseType type, int aMoney);
+	void setID(int id);
 	std::string nameCard(int thisId);
 private:
-	int money;
+	//int money;
 	int thisId;
 	//std::vector<int> storage;
 };
 
-Character::Character(int aId) {
-	thisId = aId;
-	chara.push_back(this->thisId);
+Character::Character() {
 }
 
 Character::~Character() {

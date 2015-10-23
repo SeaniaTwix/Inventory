@@ -3,10 +3,7 @@
 #include <vector>
 #include "character.h"
 
-typedef enum {
-	OUTGOINGS,
-	INCOME
-} UseType;
+
 
 void initScreen();
 

@@ -8,19 +8,19 @@
 // 인자로 받은 itemId를 toWho의 인벤토리에 넣고, 실행한 측의 인벤토리에선 삭제해야 함. 아이템의 가격이 설정된 함수를 불러 toWho의 money에서 빼야함.
 void Deal::Sell(int toWho, int itemId) {
 	int price = getPrice(itemId);
-	me.wallet(INCOME, price);
+	/*me.wallet(INCOME, price);
 
 	getItem(itemId);
-	me.removeItem(itemId);
+	me.removeItem(itemId);*/
 }
 
 // 이 함수를 부르면 몇 명의 상대방이 있는지를 보여주고 선택한 상대방이 무슨 아이템을 가지고 있는지 보여줘야 함.
 void Deal::Buy(int byWho, int itemId) {
 	int price = getPrice(itemId);
-	me.wallet(OUTGOINGS, price);
+	//me.wallet(OUTGOINGS, price);
 
-	byWho.removeItem(itemId);
-	me.getItem(itemId);
+	//byWho.removeItem(itemId);
+	//me.getItem(itemId);
 }
 
 // 나중엔 map으로 각 아이템의 가격을 데이터 형식으로 만들 것. 그 뒤엔 자체적으로 이름값 리턴
