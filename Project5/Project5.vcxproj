@@ -121,6 +121,7 @@
   <ItemGroup>
     <ClCompile Include="character.cpp" />
     <ClCompile Include="deal.cpp" />
+    <ClCompile Include="initializer.cpp" />
     <ClCompile Include="inventory.cpp" />
     <ClCompile Include="items.cpp" />
     <ClCompile Include="money.cpp" />
