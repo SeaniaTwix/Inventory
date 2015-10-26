@@ -1,12 +1,35 @@
 #include "npc.h"
-#include "system.h"
 #include <map>
 
-std::map<int, std::string> nameList();
+extern std::map<int, std::string> NPCList;
+auto i = 0;
 
-//
-//std::string NPC::Name(int npcId) {
-//	return nameList()[npcId];
-//}
+std::string nameList(int n) {
+	std::vector<std::string> strv;
 
-// 모든 Npc의 코드 번호, 이름을 차례대로 표시한다.
+	//strv.insert(std::make_pair(-1, "You"));
+	strv.push_back("Bob");
+	strv.push_back("Nasha");
+	strv.push_back("Roarly");
+	strv.push_back("John");
+
+	return strv[n];
+}
+
+NPC::NPC(int setNpcId) {
+	this->setID(setNpcId);
+	auto thisNPCID = this->retID();
+	NPCList.insert(std::make_pair(i, nameList(setNpcId)));
+	i++;
+
+}
+
+NPC::~NPC() {
+}
+
+void getNPCList(std::map<int, std::string>::iterator begin, std::map<int, std::string>::iterator end) {
+	for (;begin != end;++begin) {
+		std::cout << (*begin).first;
+		std::cout << (*begin).second << std::endl;
+	}
+}

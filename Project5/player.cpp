@@ -1,8 +1,12 @@
 #include <wchar.h>
+#include <string>
 #include <iostream>
 #include "deal.h"
 #include "system.h"
-#include "player.h"
+#include "npc.h"
+
+void initGame();
+Character cha;
 
 int main() {
 
@@ -19,6 +23,8 @@ int main() {
 	_getwch();
 	//*/
 
+	initGame();
+
 	while (true) {
 		getInputState();
 		_getwch();
@@ -30,24 +36,26 @@ int main() {
 
 void getInputState() {
 
+	std::map<int, std::string>::iterator it, begin, end;
+
 	std::cout << "무엇을 할까? (b/s/q):" << std::endl;
 
 	Deal deal;
 
 	wchar_t c = _getwch();
 
-
 	int input;
 	/* Npc 목록 호출 */
-	showNpcNameList();
+	getNPCList(begin, end);
 	std::cout << std::string("-", 20);
 	std::cout << "누구와 거래하시겠습니까?";
 	std::cin >> input;
 	std::cout << std::endl;
 
-	Character cha;
-	cha.setID(input);
-	int charaNums = cha.retID();
+	Character doWithThis = cha;
+
+	doWithThis.setID(input);
+	int charaNums = doWithThis.retID();
 
 	c = '\0';
 
@@ -57,20 +65,20 @@ void getInputState() {
 		break;
 	case 'b': // buy
 		int ba;
-		cha.printInventory();
+		doWithThis.printInventory();
 		// 아직 목록 순서에 대응하는 코드가 없음
 		std::cout << "무얼 살까? (앞에 있는 번호를 쓰자)" << std::endl;
 		std::cin >> ba;
-		deal.Buy(&cha, ba);
+		deal.Buy(&doWithThis, ba);
 
 		break;
 	case 's': // sell
 		int sa;
-		me.printInventory();
+		doWithThis.printInventory();
 		// 아직 목록 순서에 대응하는 코드가 없음
 		std::cout << "무얼 팔까? (앞에 있는 번호를 쓰자)" << std::endl;
 		std::cin >> sa;
-		deal.Sell(&cha, sa);
+		deal.Sell(&doWithThis, sa);
 
 		break;
 	default:

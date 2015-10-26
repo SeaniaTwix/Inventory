@@ -1,13 +1,11 @@
 #pragma once
-//
-//class NPC : public Inventory {
-//public:
-//	NPC(int aNpcId) {
-//		npcId = aNpcId;
-//	}
-//	//std::string Name(int npcId);
-//	int npcMoney;
-//private:
-//	int npcId;
-//	std::string npcName;
-//};
+#include "player.h"
+
+std::string nameList(int n);
+void getNPCList(std::map<int, std::string>::iterator begin, std::map<int, std::string>::iterator end);
+
+class NPC : protected Character {
+public:
+	NPC(int setNpcId);
+	~NPC();
+};

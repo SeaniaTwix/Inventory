@@ -3,9 +3,13 @@
 
 #include <vector>
 #include <string>
+#include <map>
 #include "system.h"
 #include "inventory.h"
 #include "money.h"
+
+//std::map<int, std::string> nameList();
+//void showNpcNameList(std::map<int, std::string>::iterator begin, std::map<int, std::string>::iterator end);
 
 typedef enum {
 	OUTGOINGS,
@@ -21,10 +25,11 @@ public:
 	void setID(int id);
 	int retID();
 	std::string nameCard(int thisId);
+protected:
 private:
-	//int money;
 	int thisId;
 	//std::vector<int> storage;
+	//int money;
 };
 
 //Character::Character() {
