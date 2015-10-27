@@ -1,5 +1,5 @@
-#ifndef __INVECTORY_H__
-#define __INVECTORY_H__
+#ifndef __INVENTORY_H__
+#define __INVENTORY_H__
 
 #include <iostream>
 #include <vector>

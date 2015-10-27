@@ -8,7 +8,7 @@
 #include "inventory.h"
 #include "money.h"
 
-//std::map<int, std::string> nameList();
+std::map<int, std::string> nameList();
 //void showNpcNameList(std::map<int, std::string>::iterator begin, std::map<int, std::string>::iterator end);
 
 typedef enum {

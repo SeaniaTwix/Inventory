@@ -4,11 +4,10 @@
 #include "player.h"
 
 std::string nameList(int n);
+//std::map<int, std::string> NPCList;
 void getNPCList(std::map<int, std::string>::iterator begin, std::map<int, std::string>::iterator end);
 
-extern std::map<int, std::string> NPCList;
-
-class NPC : protected Character {
+class NPC : public Character {
 public:
 	NPC(int setNpcId);
 	~NPC();

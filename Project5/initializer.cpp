@@ -10,13 +10,11 @@ void addItemTo(Character* npc) {
 	npc->getItem(Gum);
 }
 
-Character* initGame() {
+NPC initGame() {
 	me.setID(-1);
 
-	Character cha;
+	NPC cha(0);
 	addItemTo(&cha);
 
-
-
-	return &cha;
+	return cha;
 }

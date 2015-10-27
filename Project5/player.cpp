@@ -5,7 +5,7 @@
 #include "system.h"
 #include "npc.h"
 
-Character* initGame();
+NPC initGame();
 
 int main() {
 
@@ -22,10 +22,10 @@ int main() {
 	_getwch();
 	//*/
 
-	Character &cha = *initGame();
+	NPC* cha = &initGame();
 
 	while (true) {
-		getInputState(cha);
+		getInputState(*cha);
 		_getwch();
 		initScreen();
 	}
@@ -33,7 +33,7 @@ int main() {
 	return 0;
 }
 
-void getInputState(Character cha) {
+void getInputState(NPC cha) {
 
 	std::map<int, std::string>::iterator it, begin, end;
 
@@ -55,7 +55,7 @@ void getInputState(Character cha) {
 	cha.setID(input);
 	int charaNums = cha.retID();
 
-	c = '\0';
+	//c = '\0';
 
 	switch (c) {
 	case 'q': // quit

@@ -1,27 +1,30 @@
 #include "npc.h"
 
-std::map<int, std::string> NPCList;
+extern std::map<int, std::string> NPCList;
 auto i = 0;
 
-std::string nameList(int n) {
-
-	//strv.insert(std::make_pair(-1, "You"));
-	NPCList.insert(std::make_pair(0, "Bob"));
-	NPCList.insert(std::make_pair(1, "Nasha"));
-	NPCList.insert(std::make_pair(2, "Roarly"));
-	NPCList.insert(std::make_pair(3, "John"));
-
-	// iterator of NPCList(n)
-	auto it = NPCList.find(n);
-
-	return (*it).second;
-}
+//std::string nameList(int n) {
+//
+//	//strv.insert(std::make_pair(-1, "You"));
+//	NPCList.insert(std::make_pair(0, "Bob"));
+//	NPCList.insert(std::make_pair(1, "Nasha"));
+//	NPCList.insert(std::make_pair(2, "Roarly"));
+//	NPCList.insert(std::make_pair(3, "John"));
+//
+//	// iterator of NPCList(n)
+//	auto it = NPCList.find(n);
+//
+//	return (*it).second;
+//}
 
 NPC::NPC(int setNpcId) {
 	this->setID(setNpcId);
 	auto thisNPCID = this->retID();
-	NPCList.insert(std::make_pair(i, nameList(thisNPCID)));
+	NPCList.insert(std::make_pair(i, /*nameList(thisNPCID)*/"TEST"));
 	i++;
+
+	//test
+	std::cout << "NPC Created" << std::endl;
 
 }
 
