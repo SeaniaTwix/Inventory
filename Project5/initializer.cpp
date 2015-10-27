@@ -1,5 +1,7 @@
-#include "player.h"
+#include "npc.h"
 #include "items.h"
+
+std::map<int, std::string> NPCList;
 
 void addItemTo(Character* npc) {
 	using namespace ITEM;
@@ -8,10 +10,13 @@ void addItemTo(Character* npc) {
 	npc->getItem(Gum);
 }
 
-void initGame() {
+Character* initGame() {
 	me.setID(-1);
 
-	extern Character cha;
-
+	Character cha;
 	addItemTo(&cha);
+
+
+
+	return &cha;
 }

@@ -4,7 +4,7 @@
 
 #define __QUIT__ 0
 
-void getInputState();
+void getInputState(Character cha);
 //void showNpcNameList();
 
 extern Character me;
