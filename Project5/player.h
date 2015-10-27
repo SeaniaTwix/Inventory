@@ -6,8 +6,7 @@
 
 class NPC;
 
-void getInputState(NPC cha);
-//void showNpcNameList();
+void getInputState(NPC* cha);
 
 extern Character me;
 

@@ -39,7 +39,3 @@ int Character::retID() {
 	return this->thisId;
 }
 
-std::string Character::nameCard(int aId) {
-	//return nameList(this->thisId);
-}
-

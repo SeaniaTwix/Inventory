@@ -8,8 +8,7 @@
 #include "inventory.h"
 #include "money.h"
 
-std::map<int, std::string> nameList();
-//void showNpcNameList(std::map<int, std::string>::iterator begin, std::map<int, std::string>::iterator end);
+std::string nameList();
 
 typedef enum {
 	OUTGOINGS,
@@ -24,7 +23,6 @@ public:
 	void wallet(UseType type, int aMoney);
 	void setID(int id);
 	int retID();
-	std::string nameCard(int thisId);
 protected:
 private:
 	int thisId;
