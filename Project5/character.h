@@ -26,13 +26,6 @@ public:
 protected:
 private:
 	int thisId;
-	//std::vector<int> storage;
-	//int money;
 };
 
-//Character::Character() {
-//}
-//
-//Character::~Character() {
-//}
 #endif
