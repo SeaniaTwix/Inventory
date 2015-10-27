@@ -1,23 +1,27 @@
 #include "money.h"
-#include "character.h"
+#include "player.h"
 
-void Money::incMoney(int moneyValue, int Who) {
-
-	if (Who == -1) {
+//////////////////////////////////////////////////////////////////////////
+//////							증가 값								//////
+//////////////////////////////////////////////////////////////////////////
+void Money::incMoney(int moneyValue) {
+	this->money += moneyValue;
+/*
+	if (Who.retID() != me.thisId) {
 		me.wallet(INCOME, moneyValue);
 	} else {
-		Character chara(Who);
-		chara.wallet(INCOME, moneyValue);
-	}
+		Who.wallet(INCOME, moneyValue);
+	}*/
 }
 
-void Money::decMoney(int moneyValue, int Who) {
-
-	if (Who == -1) {
-		Character me(-1);
+//////////////////////////////////////////////////////////////////////////
+//////							감소 값								//////
+//////////////////////////////////////////////////////////////////////////
+void Money::decMoney(int moneyValue) {
+	this->money -= moneyValue;
+	/*if (Who.retID() != me.thisId) {
 		me.wallet(OUTGOINGS, moneyValue);
 	} else {
-		Character chara(Who);
-		chara.wallet(OUTGOINGS, moneyValue);
-	}
+		Who.wallet(OUTGOINGS, moneyValue);
+	}*/
 }

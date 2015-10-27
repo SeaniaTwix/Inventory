@@ -119,7 +119,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="character.cpp" />
     <ClCompile Include="deal.cpp" />
+    <ClCompile Include="initializer.cpp" />
     <ClCompile Include="inventory.cpp" />
     <ClCompile Include="items.cpp" />
     <ClCompile Include="money.cpp" />
@@ -128,6 +130,7 @@
     <ClCompile Include="system.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="character.h" />
     <ClInclude Include="deal.h" />
     <ClInclude Include="inventory.h" />
     <ClInclude Include="items.h" />

@@ -1,28 +1,40 @@
-#pragma once
+#ifndef __CHARACTER_H__
+#define __CHARACTER_H__
+
 #include <vector>
 #include <string>
+#include <map>
 #include "system.h"
 #include "inventory.h"
+#include "money.h"
 
-class Character : public Inventory {
+//std::map<int, std::string> nameList();
+//void showNpcNameList(std::map<int, std::string>::iterator begin, std::map<int, std::string>::iterator end);
+
+typedef enum {
+	OUTGOINGS,
+	INCOME
+} UseType;
+
+class Character : public Inventory, public Money {
 public:
-	Character(int aId);
-	~Character();
+	//Character();
+	//~Character();
 	std::string name;
 	void wallet(UseType type, int aMoney);
+	void setID(int id);
+	int retID();
 	std::string nameCard(int thisId);
+protected:
 private:
-	int money;
 	int thisId;
 	//std::vector<int> storage;
+	//int money;
 };
 
-Character::Character(int aId) {
-	thisId = aId;
-	{ using namespace CHARALIST;
-	chara.push_back(thisId);
-	}
-}
-
-Character::~Character() {
-}
+//Character::Character() {
+//}
+//
+//Character::~Character() {
+//}
+#endif

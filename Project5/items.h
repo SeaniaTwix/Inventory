@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __ITEM_H__
+#define __ITEM_H__
+
 #include <string>
 
 std::string getItemName(int itemNum);
@@ -13,3 +15,4 @@ namespace ITEM {
 		Gum
 	};
 }
+#endif

@@ -1,12 +1,12 @@
-#pragma once
-#include "player.h"
-#include "npc.h"
+#ifndef __MONEY_H__
+#define __MONEY_H__
 
 class Money {
 public:
-	void incMoney(int moneyValue, int Who);
-	void decMoney(int moneyValue, int Who);
+	void incMoney(int moneyValue);
+	void decMoney(int moneyValue);
 protected:
+	int money;
 private:
-	//int money;
 };
+#endif

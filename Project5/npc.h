@@ -1,15 +1,16 @@
-#pragma once
-#include <string>
-#include "inventory.h"
+#ifndef npc_h__
+#define npc_h__
 
-class NPC : public Inventory {
+#include "player.h"
+
+std::string nameList(int n);
+void getNPCList(std::map<int, std::string>::iterator begin, std::map<int, std::string>::iterator end);
+
+extern std::map<int, std::string> NPCList;
+
+class NPC : protected Character {
 public:
-	NPC(int aNpcId) {
-		npcId = aNpcId;
-	}
-	//std::string Name(int npcId);
-	int npcMoney;
-private:
-	int npcId;
-	std::string npcName;
+	NPC(int setNpcId);
+	~NPC();
 };
+#endif // npc_h__

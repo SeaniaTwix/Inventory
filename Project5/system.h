@@ -1,17 +1,12 @@
-#pragma once
+#ifndef __SYSTEM_H__
+#define __SYSTEM_H__
+
 #include <Windows.h>
 #include <vector>
-#include "character.h"
-
-typedef enum {
-	OUTGOINGS,
-	INCOME
-} UseType;
+//#include "character.h"
 
 void initScreen();
 
-namespace CHARALIST {
-	extern std::vector<int> chara;
-}
-
-extern Character me(-1);
+extern std::vector<int> chara;
+// me (플레이어 자신)은 유일하기 때문에 전역 처리.
+#endif
