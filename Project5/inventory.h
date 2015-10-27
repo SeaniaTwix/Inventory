@@ -10,6 +10,7 @@ public:
 	void printInventory();
 	void getItem(int itemId);
 	void removeItem(int itemId);
+	std::vector<std::string> retNameList(int itemCode);
 protected:
 private:
 	std::vector<int> storage;

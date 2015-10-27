@@ -1,6 +1,7 @@
 #include "inventory.h"
 #include "items.h"
 
+
 void Inventory::printInventory() {
 	for (std::vector<int>::iterator it = Inventory::storage.begin(); it != Inventory::storage.end(); ++it) {
 		std::string str = getItemName(Inventory::storage.at(*it));
@@ -22,3 +23,16 @@ void Inventory::removeItem(int itemId) {
 	}
 
 }
+
+std::vector<std::string> Inventory::retNameList(int itemCode) {
+	std::vector<std::string> vlist;
+
+	vlist.push_back("Apple");
+	vlist.push_back("Water Bottle");
+	vlist.push_back("Hat");
+	vlist.push_back("Shose");
+	vlist.push_back("Socks");
+	vlist.push_back("Gum");
+	return vlist;
+}
+
