@@ -2,10 +2,18 @@
 #include "items.h"
 
 
-void Inventory::printInventory() {
-	for (std::vector<int>::iterator it = Inventory::storage.begin(); it != Inventory::storage.end(); ++it) {
-		std::string str = getItemName(Inventory::storage.at(*it));
-		std::cout << *it << ", " << str << std::endl;
+Inventory::Inventory() {
+	vb = storage.begin();
+	ve = storage.end();
+}
+
+Inventory::~Inventory() {
+}
+
+void Inventory::printInventory(std::vector<int>::iterator beg, std::vector<int>::iterator end) {
+	for (; beg != end; ++beg) {
+		std::string str = getItemName(Inventory::storage.at(*beg));
+		std::cout << *beg << ", " << str << std::endl;
 	}
 }
 
