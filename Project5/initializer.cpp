@@ -1,9 +1,11 @@
 #include "npc.h"
 #include "items.h"
 
-void addItemTo(Character* npc) {
+void addItemTo(NPC* npc) {
 	using namespace ITEM;
-	npc->getItem(Apple);
+	/*npc->getItem(Apple);
 	npc->getItem(WaterBottle);
-	npc->getItem(Gum);
+	npc->getItem(Gum);*/
+
+
 }

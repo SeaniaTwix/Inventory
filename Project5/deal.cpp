@@ -8,10 +8,6 @@ Character me;
 // 아이템이나 돈이 없을 경우 예외처리 필요
 void Deal::Sell(Character* toWho, int itemId) {
 	int price = getPrice(itemId);
-	/*me.wallet(INCOME, price);
-
-	getItem(itemId);
-	me.removeItem(itemId);*/
 
 	toWho->getItem(itemId);
 	me.removeItem(itemId);
@@ -23,9 +19,6 @@ void Deal::Sell(Character* toWho, int itemId) {
 // 아이템이나 돈이 없을 경우 예외처리 필요
 void Deal::Buy(Character* byWho, int itemId) {
 	int price = getPrice(itemId);
-	//me.wallet(OUTGOINGS, price);
-	//byWho.removeItem(itemId);
-	//me.getItem(itemId);
 
 	byWho->removeItem(itemId);
 	me.getItem(itemId);

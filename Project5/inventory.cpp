@@ -1,6 +1,6 @@
 #include "inventory.h"
 #include "items.h"
-
+#include <algorithm>
 
 Inventory::Inventory() {
 	vb = storage.begin();
@@ -10,26 +10,40 @@ Inventory::Inventory() {
 Inventory::~Inventory() {
 }
 
-void Inventory::printInventory(std::vector<int>::iterator beg, std::vector<int>::iterator end) {
-	for (; beg != end; ++beg) {
-		std::string str = getItemName(Inventory::storage.at(*beg));
-		std::cout << *beg << ", " << str << std::endl;
-	}
+void Inventory::printInventory(std::forward_list<Item> &flist) {
+
+	//for (/*vb = storage.begin()*/; vb != ve; ++vb) {
+	//	std::string str = getItemName(Inventory::storage.at(vb));
+	//	std::cout /*<< 아이템 코드 넣어줘야 하는 곳*/ << ", " << str << std::endl;
+	//	std::cout << (&vb) << std::endl;
+	//}
+
+	
 }
 
 void Inventory::getItem(int itemId) {
-	Inventory::storage.push_back(itemId);
+	Item &it = item;
+	
+	storage.push_front(it);
+	auto now = storage.begin();
+
+	(&now).itemCode = itemId;
+	
 }
 
 void Inventory::removeItem(int itemId) {
-	for (std::vector<int>::iterator it = Inventory::storage.begin(); it != Inventory::storage.end();) {
-		if (Inventory::storage.at(*it) == itemId) {
-			it = Inventory::storage.erase(it);
-		} else {
-			++it;
-		}
-	}
 
+	//for (vb = storage.begin(); vb != ve;) {
+	//	if (Inventory::storage.at(*vb) == itemId) {
+	//		vb = Inventory::storage.erase(vb);
+	//	} else {
+	//		++vb;
+	//	}
+	//}
+
+	//vb = storage.begin();
+
+	std::remove_if(vb, ve, itemId);
 }
 
 std::vector<std::string> Inventory::retNameList(int itemCode) {

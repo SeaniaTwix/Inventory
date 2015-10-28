@@ -14,3 +14,9 @@ std::string getItemName(int itemNum) {
 		break;
 	}
 }
+
+// item { itemName, itemCode }
+typedef struct {
+	std::string itemName;
+	int itemCode;
+} Item;

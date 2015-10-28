@@ -4,10 +4,11 @@
 #include <string>
 
 std::string getItemName(int itemNum);
+struct Item;
 
 namespace ITEM {
 	enum ITEMS {
-		Apple = 100,
+		Apple,
 		WaterBottle,
 		Hat,
 		Shose,
