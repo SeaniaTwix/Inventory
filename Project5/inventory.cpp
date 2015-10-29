@@ -20,6 +20,9 @@ bool operator==(const int &Left, const ItemType &Right) {
 }
 
 void Inventory::getItem(int itemId, unsigned int howMany) {
+
+/*
+
 	InvIterator finder = this->inventoryFinder(itemId);
 
 	if (finder == this->storage.end()) {
@@ -32,7 +35,7 @@ void Inventory::getItem(int itemId, unsigned int howMany) {
 
 	} else {
 		(*finder).howMany += howMany;
-	}
+	}*/
 }
 
 void Inventory::removeItem(int itemId, unsigned int howMany) {
@@ -44,12 +47,21 @@ void Inventory::removeItem(int itemId, unsigned int howMany) {
 	//	}
 	//}
 
+
 	InvIterator finder = this->inventoryFinder(itemId);
+
 
 	// 지우고자 하는 아이템의 코드가 storage에 있고, 지우고자하는 아이템의 갯수가 현재 존재하는 갯수 만큼 존재할 경우
 	// vector에 존재하는 ItemType 요소를 지움
 	if (itemId == (*finder).itemCode && howMany == (*finder).howMany) {
-		std::remove(this->storage.begin(), this->storage.end(), finder);
+		//std::remove(this->storage.begin(), this->storage.end(), finder);
+
+		std::remove(this->storage.begin());
+
+		std::remove(this->storage.end(), finder);
+
+
+
 	// 갯수만 다르다면
 	} else if (itemId == (*finder).itemCode) {
 		// 삭제 요청 갯수가 가지고 있는 것보다 많다면
