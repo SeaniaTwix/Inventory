@@ -2,24 +2,31 @@
 #define __INVENTORY_H__
 
 #include <iostream>
-#include <forward_list>
 #include <vector>
 #include <conio.h>
 #include "items.h"
+
+// item { itemName, itemCode, howMany }
+struct ItemType {
+	std::string itemName;
+	int itemCode;
+	unsigned int howMany;
+};
+
+typedef std::vector<ItemType>::iterator InvIterator;
 
 class Inventory {
 public:
 	Inventory();
 	~Inventory();
-	void printInventory(std::forward_list<Item> &flist);
-	void getItem(int itemId);
-	void removeItem(int itemId);
-	std::vector<std::string> retNameList(int itemCode);
+	InvIterator inventoryFinder(int codeToFind);
+	void printInventory();
+	void getItem(int itemId, unsigned int howMany);
+	void removeItem(int itemId, unsigned int howMany);
+
 protected:
 private:
-
-	Item item;
-	std::forward_list<Item> storage;
-	std::forward_list<Item>::iterator vb, ve;
+	std::vector<ItemType> storage;
 };
+
 #endif

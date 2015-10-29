@@ -4,7 +4,7 @@
 #include <string>
 
 std::string getItemName(int itemNum);
-struct Item;
+//struct ItemType;
 
 namespace ITEM {
 	enum ITEMS {
@@ -16,4 +16,12 @@ namespace ITEM {
 		Gum
 	};
 }
+//
+//// item { itemName, itemCode }
+//struct ItemType {
+//	std::string itemName;
+//	int itemCode;
+//	unsigned int howMany;
+//};
+
 #endif

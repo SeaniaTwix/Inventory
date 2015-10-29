@@ -48,6 +48,8 @@ void getInputState(NPC* aDummyNPC) {
 	Deal deal;
 
 	wchar_t c = _getwch();
+	unsigned int howmany = 0;
+	unsigned int a = 0;
 
 	int input;
 	std::cout << std::string(20, '-') << std::endl;
@@ -67,21 +69,25 @@ void getInputState(NPC* aDummyNPC) {
 		exit(__QUIT__);
 		break;
 	case 'b': // buy
-		int ba;
 		cha->printInventory();
 		// 아직 목록 순서에 대응하는 코드가 없음
 		std::cout << "무얼 살까? (앞에 있는 번호를 쓰자)" << std::endl;
-		std::cin >> ba;
-		deal.Buy(cha, ba);
+		std::cin >> a;
+		std::cout << "갯수:";
+		std::cin >> howmany;
+		std::cout << std::endl;
+		deal.Buy(cha, a, howmany);
 
 		break;
 	case 's': // sell
-		int sa;
 		cha->printInventory();
 		// 아직 목록 순서에 대응하는 코드가 없음
 		std::cout << "무얼 팔까? (앞에 있는 번호를 쓰자)" << std::endl;
-		std::cin >> sa;
-		deal.Sell(cha, sa);
+		std::cin >> a;
+		std::cout << "갯수:";
+		std::cin >> howmany;
+		std::cout << std::endl;
+		deal.Sell(cha, a, howmany);
 
 		break;
 	default:
