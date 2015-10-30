@@ -6,12 +6,6 @@
 //////////////////////////////////////////////////////////////////////////
 void Money::incMoney(int moneyValue) {
 	this->money += moneyValue;
-/*
-	if (Who.retID() != me.thisId) {
-		me.wallet(INCOME, moneyValue);
-	} else {
-		Who.wallet(INCOME, moneyValue);
-	}*/
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -19,9 +13,4 @@ void Money::incMoney(int moneyValue) {
 //////////////////////////////////////////////////////////////////////////
 void Money::decMoney(int moneyValue) {
 	this->money -= moneyValue;
-	/*if (Who.retID() != me.thisId) {
-		me.wallet(OUTGOINGS, moneyValue);
-	} else {
-		Who.wallet(OUTGOINGS, moneyValue);
-	}*/
 }

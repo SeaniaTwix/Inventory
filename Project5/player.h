@@ -8,17 +8,7 @@ class NPC;
 
 void getInputState(NPC* cha);
 
+// me (플레이어 자신)은 유일하기 때문에 전역 처리.
 extern Character me;
-
-//class Player : public Character {
-//public:
-//	Player() {
-//		thisId = -1;
-//	}
-//	//int playerMoney;
-//protected:
-//	int thisId;
-//private:
-//};
 
 #endif

@@ -6,7 +6,6 @@ class Deal {
 public:
 	void Sell(Character* toWho, int itemId, int howMany);
 	void Buy(Character* byWho, int itemId, int howMany);
-	int getPrice(int itemId);
 private:
 
 };

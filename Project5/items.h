@@ -18,12 +18,4 @@ namespace ITEM {
 		Gum
 	};
 }
-//
-//// item { itemName, itemCode }
-//struct ItemType {
-//	std::string itemName;
-//	int itemCode;
-//	unsigned int howMany;
-//};
-
 #endif

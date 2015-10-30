@@ -30,7 +30,7 @@ NPC::NPC(int setNpcId) {
 	this->name = nameList();
 	i++;
 
-	//* test
+	/* test
 	std::cout << "NPC Constructed. ID:" << this->retID() << std::endl;
 	std::cout << "Name: " << this->name << std::endl;
 	//*/
@@ -46,7 +46,7 @@ NPC::NPC() {
 }
 
 NPC::~NPC() {
-	//* test
+	/* test
 	std::cout << "NPC Destructed. ID:" << this->retID() << std::endl;
 	//*/
 }

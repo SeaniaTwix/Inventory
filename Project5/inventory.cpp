@@ -40,22 +40,12 @@ void Inventory::getItem(int itemId, unsigned int howMany) {
 }
 
 void Inventory::removeItem(int itemId, unsigned int howMany) {
-	//for (vb = storage.begin(); vb != ve;) {
-	//	if (Inventory::storage.at(*vb) == itemId) {
-	//		vb = Inventory::storage.erase(vb);
-	//	} else {
-	//		++vb;
-	//	}
-	//}
-
-
 	InvIterator finder = this->inventoryFinder(itemId);
 
 
 	// 지우고자 하는 아이템의 코드가 storage에 있고, 지우고자하는 아이템의 갯수가 현재 존재하는 갯수 만큼 존재할 경우
 	// vector에 존재하는 ItemType 요소를 지움
 	if (itemId == (*finder).itemCode && howMany == (*finder).howMany) {
-		//std::remove(this->storage.begin(), this->storage.end(), finder);
 		this->storage.erase(std::remove_if(	this->storage.begin(), 
 											this->storage.end(), 
 											[itemId](ItemType const& itemTy) { return itemTy.itemCode == itemId; }),
@@ -76,11 +66,6 @@ InvIterator Inventory::inventoryFinder(int codeToFind) {
 }
 
 void Inventory::printInventory() {
-	//for (/*vb = storage.begin()*/; vb != ve; ++vb) {
-	//	std::string str = getItemName(Inventory::storage.at(vb));
-	//	std::cout /*<< 아이템 코드 넣어줘야 하는 곳*/ << ", " << str << std::endl;
-	//	std::cout << (&vb) << std::endl;
-	//}
 	int num = 0;
 
 	for (InvIterator i = this->storage.begin(); i != this->storage.end(); ++i) {
@@ -88,16 +73,3 @@ void Inventory::printInventory() {
 	}
 
 }
-
-//std::vector<std::string> Inventory::retNameList(int itemCode) {
-//	std::vector<std::string> vlist;
-//
-//	vlist.push_back("Apple");
-//	vlist.push_back("Water Bottle");
-//	vlist.push_back("Hat");
-//	vlist.push_back("Shose");
-//	vlist.push_back("Socks");
-//	vlist.push_back("Gum");
-//	return vlist;
-//}
-//

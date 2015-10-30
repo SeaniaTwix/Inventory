@@ -10,19 +10,6 @@ void addItemTo(NPC* npc);
 
 int main() {
 
-	/*
-	Inventory inven;
-
-	{ using namespace ITEM;
-		inven.inputItem(APPLE);
-	}
-
-	inven.viewInv();
-	std::cout << "you have " << money << " money now" << std::endl;
-
-	_getwch();
-	//*/
-
 	NPC dummyNPC(-1);
 
 	while (true) {
@@ -59,6 +46,7 @@ void getInputState(NPC* aDummyNPC) {
 
 	int input;
 	std::cout << std::string(20, '-') << std::endl;
+
 	/* Npc 목록 호출 */
 	getNPCList(begin, end);
 	std::cout << std::string(20, '-') << std::endl;

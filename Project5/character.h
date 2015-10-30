@@ -18,8 +18,6 @@ typedef enum {
 
 class Character : public Inventory, public Money {
 public:
-	//Character();
-	//~Character();
 	std::string name;
 	int wallet(UseType type);
 	void wallet(UseType type, int aMoney);
