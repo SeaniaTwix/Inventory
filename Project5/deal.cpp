@@ -2,8 +2,8 @@
 #include "items.h"
 #include "player.h"
 
-bool checkMoneyForDeal(const int itemCode, const int haveMoney) {
-	if (haveMoney >= getItemValue(itemCode)) {
+bool checkMoneyForDeal(const int itemCode, const int haveMoney, const int howMany) {
+	if (haveMoney >= getItemValue(itemCode) * howMany) {
 		return true;
 	} else {
 		return false;
