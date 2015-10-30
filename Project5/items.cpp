@@ -6,10 +6,14 @@ int getItemValue(const int code) {
 
 	std::map<int, int> database;
 
-	database.insert(std::make_pair(0, 100));
-	database.insert(std::make_pair(1, 120));
-	database.insert(std::make_pair(2, 110));
-	database.insert(std::make_pair(3, 130));
+	using namespace ITEM;
+
+	database.insert(std::make_pair(Apple, 100));
+	database.insert(std::make_pair(WaterBottle, 120));
+	database.insert(std::make_pair(Hat, 110));
+	database.insert(std::make_pair(Shose, 130));
+	database.insert(std::make_pair(Socks, 150));
+	database.insert(std::make_pair(Gum, 50));
 
 	return database[code];
 }

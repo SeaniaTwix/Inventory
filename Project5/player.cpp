@@ -12,6 +12,8 @@ int main() {
 
 	NPC dummyNPC(-1);
 
+	addItemTo(&dummyNPC);
+
 	while (true) {
 		getInputState(&dummyNPC);
 		_getwch();
@@ -28,8 +30,11 @@ void getInputState(NPC* aDummyNPC) {
 	begin = NPCList.begin();
 	end = NPCList.end();
 
-	addItemTo(aDummyNPC);
-
+	std::cout << std::string(20, '-') << std::endl;
+	std::cout << "내가 가지고 있는 돈: " << me.wallet(CHECK) << std::endl;
+	std::cout << "인벤토리 목록" << std::endl;
+	me.printInventory();
+	std::cout << std::string(20, '-') << std::endl;
 	std::cout << "무엇을 할까? (b/s/q):" << std::endl;
 
 	Deal deal;
