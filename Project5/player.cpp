@@ -27,6 +27,12 @@ void getInputState(NPC* aDummyNPC) {
 
 	std::map<int, std::string>::iterator begin, end;
 
+	Deal deal;
+
+	char c;
+	unsigned int howmany = 0;
+	unsigned int a = 0;
+
 	begin = NPCList.begin();
 	end = NPCList.end();
 
@@ -35,19 +41,14 @@ void getInputState(NPC* aDummyNPC) {
 	std::cout << "인벤토리 목록" << std::endl;
 	me.printInventory();
 	std::cout << std::string(20, '-') << std::endl;
-	std::cout << "무엇을 할까? (b/s/q):" << std::endl;
+	std::cout << "활동 목록" << std::endl;
+	std::cout << "b, Buy" << std::endl;
+	std::cout << "s, Sell" << std::endl;
+	std::cout << "q, Quit" << std::endl;
+	std::cout << std::string(20, '-') << std::endl;
 
-	Deal deal;
 
-	wchar_t c = _getwch();
-	unsigned int howmany = 0;
-	unsigned int a = 0;
-
-	/*if (c != 'b' || c != 's' || c != 'q') {
-		std::cout << "ERR! 잘못된 명령입니다" << std::endl;
-
-		return;
-	}*/
+	std::cin >> c;
 
 	int input;
 	std::cout << std::string(20, '-') << std::endl;
@@ -79,7 +80,7 @@ void getInputState(NPC* aDummyNPC) {
 
 		break;
 	case 's': // sell
-		cha->printInventory();
+		me.printInventory();
 		// 아직 목록 순서에 대응하는 코드가 없음
 		std::cout << "무얼 팔까? (앞에 있는 번호를 쓰자)" << std::endl;
 		std::cin >> a;

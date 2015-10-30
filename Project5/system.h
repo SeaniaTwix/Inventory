@@ -6,6 +6,4 @@
 //#include "character.h"
 
 void initScreen();
-
-extern std::vector<int> chara;
 #endif

@@ -17,7 +17,7 @@ std::string nameList() {
 
 	std::random_device rd;
 	std::mt19937 gen(rd());
-	std::uniform_int_distribution<int> dist(1, (int)(lList.size()));
+	std::uniform_int_distribution<int> dist(0, (int)(lList.size() - 1));
 	int dice = dist(gen);
 
 	return lList[dice];

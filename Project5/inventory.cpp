@@ -65,7 +65,6 @@ void Inventory::printInventory() {
 	int num = 0;
 
 	for (InvIterator i = this->storage.begin(); i != this->storage.end(); ++i) {
-		//std::cout << '(' << num++ << ')' << (*i).itemName << " of " << (*i).howMany << std::endl;
 		std::cout << '(' <<(*i).itemCode << ')' 
 			<< (*i).itemName << " of " 
 			<< (*i).howMany << "(price:" 
