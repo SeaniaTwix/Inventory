@@ -19,10 +19,6 @@ bool operator==(const int &Left, const ItemType &Right) {
 	return Left == Right.itemCode;
 }
 
-bool isSameCode (const InvIterator& itemT, const int code) {
-	return itemT->itemCode == code;
-}
-
 void Inventory::getItem(int itemId, unsigned int howMany) {
 	InvIterator finder = this->inventoryFinder(itemId);
 

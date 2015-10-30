@@ -25,7 +25,7 @@ int main() {
 
 void getInputState(NPC* aDummyNPC) {
 
-	std::map<int, std::string>::iterator it, begin, end;
+	std::map<int, std::string>::iterator begin, end;
 
 	begin = NPCList.begin();
 	end = NPCList.end();
