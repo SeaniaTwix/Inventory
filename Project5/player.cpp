@@ -51,12 +51,18 @@ void getInputState(NPC* aDummyNPC) {
 	unsigned int howmany = 0;
 	unsigned int a = 0;
 
+	/*if (c != 'b' || c != 's' || c != 'q') {
+		std::cout << "ERR! 잘못된 명령입니다" << std::endl;
+
+		return;
+	}*/
+
 	int input;
 	std::cout << std::string(20, '-') << std::endl;
 	/* Npc 목록 호출 */
 	getNPCList(begin, end);
 	std::cout << std::string(20, '-') << std::endl;
-	std::cout << "누구와 거래하시겠습니까?";
+	std::cout << "누구와 거래하시겠습니까? (번호) : ";
 	std::cin >> input;
 	std::cout << std::endl;
 

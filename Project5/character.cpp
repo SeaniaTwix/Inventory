@@ -31,6 +31,17 @@ void Character::wallet(UseType type, int aMoney) {
 	}
 }
 
+int Character::wallet(UseType type) {
+	if (type == CHECK) {
+		return this->money;
+	} else {
+		//Error
+		std::cerr << "Error! Argument didnt matched!" << std::endl;
+		_getwch();
+		exit(EXIT_FAILURE);
+	}
+}
+
 void Character::setID(int id) {
 	this->thisId = id;
 }

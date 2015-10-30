@@ -12,7 +12,8 @@ std::string nameList();
 
 typedef enum {
 	OUTGOINGS,
-	INCOME
+	INCOME,
+	CHECK
 } UseType;
 
 class Character : public Inventory, public Money {
@@ -20,6 +21,7 @@ public:
 	//Character();
 	//~Character();
 	std::string name;
+	int wallet(UseType type);
 	void wallet(UseType type, int aMoney);
 	void setID(int id);
 	int retID();

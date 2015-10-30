@@ -4,6 +4,8 @@
 #include <string>
 
 std::string getItemName(int itemNum);
+int getItemValue(const int code);
+
 //struct ItemType;
 
 namespace ITEM {

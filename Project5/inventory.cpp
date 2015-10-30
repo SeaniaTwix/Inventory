@@ -56,7 +56,9 @@ void Inventory::removeItem(int itemId, unsigned int howMany) {
 	// vector에 존재하는 ItemType 요소를 지움
 	if (itemId == (*finder).itemCode && howMany == (*finder).howMany) {
 		//std::remove(this->storage.begin(), this->storage.end(), finder);
-		this->storage.erase(std::remove_if(this->storage.begin(), this->storage.end(), [itemId](ItemType const& itemTy) { return itemTy.itemCode == itemId; }),
+		this->storage.erase(std::remove_if(	this->storage.begin(), 
+											this->storage.end(), 
+											[itemId](ItemType const& itemTy) { return itemTy.itemCode == itemId; }),
 			this->storage.end());
 	// 갯수만 다르다면
 	} else if (itemId == (*finder).itemCode) {
@@ -79,9 +81,10 @@ void Inventory::printInventory() {
 	//	std::cout /*<< 아이템 코드 넣어줘야 하는 곳*/ << ", " << str << std::endl;
 	//	std::cout << (&vb) << std::endl;
 	//}
+	int num = 0;
 
 	for (InvIterator i = this->storage.begin(); i != this->storage.end(); ++i) {
-		std::cout << (*i).itemName << " of " << (*i).howMany << std::endl;
+		std::cout << '(' << num++ << ')' << (*i).itemName << " of " << (*i).howMany << std::endl;
 	}
 
 }
