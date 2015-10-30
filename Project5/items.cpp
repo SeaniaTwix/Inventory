@@ -8,39 +8,28 @@ int getItemValue(const int code) {
 
 	using namespace ITEM;
 
-	database.insert(std::make_pair(Apple, 100));
+	database.insert(std::make_pair(Apple, 60));
 	database.insert(std::make_pair(WaterBottle, 120));
 	database.insert(std::make_pair(Hat, 110));
-	database.insert(std::make_pair(Shose, 130));
-	database.insert(std::make_pair(Socks, 150));
+	database.insert(std::make_pair(Shose, 180));
+	database.insert(std::make_pair(Socks, 90));
 	database.insert(std::make_pair(Gum, 50));
 
 	return database[code];
 }
 
 std::string getItemName(int itemNum) {
+
+	std::map<int, std::string> database;
+
 	using namespace ITEM;
-	switch (itemNum) {
-	case Apple:
-		return "Apple";
-		break;
-	case WaterBottle:
-		return "WaterBottle";
-		break;
-	case Hat:
-		return "Hat";
-		break;
-	case Shose:
-		return "Shose";
-		break;
-	case Socks:
-		return "Socks";
-		break;
-	case Gum:
-		return "Gum";
-		break;
-	default:
-		return "(err)";
-		break;
-	}
+
+	database.insert(std::make_pair(Apple, "Apple"));
+	database.insert(std::make_pair(WaterBottle, "Water Bottle"));
+	database.insert(std::make_pair(Hat, "Hat"));
+	database.insert(std::make_pair(Shose, "Shose"));
+	database.insert(std::make_pair(Socks, "Socks"));
+	database.insert(std::make_pair(Gum, "Gum"));
+
+	return database[itemNum];
 }
