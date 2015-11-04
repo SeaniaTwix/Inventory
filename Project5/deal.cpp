@@ -12,8 +12,8 @@ bool checkMoneyForDeal(const int itemValue, const int haveMoney) {
 
 Character me;
 
-// ÀÎÀÚ·Î ¹ŞÀº itemId¸¦ toWhoÀÇ ÀÎº¥Åä¸®¿¡ ³Ö°í, ½ÇÇàÇÑ ÃøÀÇ ÀÎº¥Åä¸®¿¡¼± »èÁ¦ÇØ¾ß ÇÔ. ¾ÆÀÌÅÛÀÇ °¡°İÀÌ ¼³Á¤µÈ ÇÔ¼ö¸¦ ºÒ·¯ toWhoÀÇ money¿¡¼­ »©¾ßÇÔ.
-// ¾ÆÀÌÅÛÀÌ³ª µ·ÀÌ ¾øÀ» °æ¿ì ¿¹¿ÜÃ³¸® ÇÊ¿ä
+// ì¸ìë¡œ ë°›ì€ itemIdë¥¼ toWhoì˜ ì¸ë²¤í† ë¦¬ì— ë„£ê³ , ì‹¤í–‰í•œ ì¸¡ì˜ ì¸ë²¤í† ë¦¬ì—ì„  ì‚­ì œí•´ì•¼ í•¨. ì•„ì´í…œì˜ ê°€ê²©ì´ ì„¤ì •ëœ í•¨ìˆ˜ë¥¼ ë¶ˆëŸ¬ toWhoì˜ moneyì—ì„œ ë¹¼ì•¼í•¨.
+// ì•„ì´í…œì´ë‚˜ ëˆì´ ì—†ì„ ê²½ìš° ì˜ˆì™¸ì²˜ë¦¬ í•„ìš”
 void Deal::Sell(Character* toWho, int itemId, int howMany) {
 	int price = getItemValue(itemId);
 
@@ -25,8 +25,8 @@ void Deal::Sell(Character* toWho, int itemId, int howMany) {
 	}
 }
 
-// ÀÌ ÇÔ¼ö¸¦ ºÎ¸£±â Àü¿¡ ¸î ¸íÀÇ »ó´ë¹æÀÌ ÀÖ´ÂÁö¸¦ º¸¿©ÁÖ°í ¼±ÅÃÇÑ »ó´ë¹æÀÌ ¹«½¼ ¾ÆÀÌÅÛÀ» °¡Áö°í ÀÖ´ÂÁö º¸¿©Áà¾ß ÇÔ.
-// ¾ÆÀÌÅÛÀÌ³ª µ·ÀÌ ¾øÀ» °æ¿ì ¿¹¿ÜÃ³¸® ÇÊ¿ä
+// ì´ í•¨ìˆ˜ë¥¼ ë¶€ë¥´ê¸° ì „ì— ëª‡ ëª…ì˜ ìƒëŒ€ë°©ì´ ìˆëŠ”ì§€ë¥¼ ë³´ì—¬ì£¼ê³  ì„ íƒí•œ ìƒëŒ€ë°©ì´ ë¬´ìŠ¨ ì•„ì´í…œì„ ê°€ì§€ê³  ìˆëŠ”ì§€ ë³´ì—¬ì¤˜ì•¼ í•¨.
+// ì•„ì´í…œì´ë‚˜ ëˆì´ ì—†ì„ ê²½ìš° ì˜ˆì™¸ì²˜ë¦¬ í•„ìš”
 void Deal::Buy(Character* byWho, int itemId, int howMany) {
 	int price = getItemValue(itemId) * howMany;
 
@@ -37,25 +37,3 @@ void Deal::Buy(Character* byWho, int itemId, int howMany) {
 		me.decMoney(price);
 	}
 }
-
-// ³ªÁß¿£ mapÀ¸·Î °¢ ¾ÆÀÌÅÛÀÇ °¡°İÀ» µ¥ÀÌÅÍ Çü½ÄÀ¸·Î ¸¸µé °Í. ±× µÚ¿£ ÀÚÃ¼ÀûÀ¸·Î ÀÌ¸§°ª ¸®ÅÏ
-//int Deal::getPrice(int itemId) {
-//	using namespace ITEM;
-//
-//	switch (itemId) {
-//	case Apple:
-//		return 100;
-//	case WaterBottle:
-//		return 250;
-//	case Hat:
-//		return 400;
-//	case Shose:
-//		return 300;
-//	case Socks:
-//		return 180;
-//	case Gum:
-//		return 30;
-//	default:
-//		return 0;
-//	}
-//}
