@@ -20,7 +20,7 @@ int Character::wallet(UseType type) {
 		return this->money;
 	} else {
 		//Error
-		std::cerr << "Error! Argument didn't matched!" << std::endl;
+		std::cerr << "Error! Argument not matched!" << std::endl;
 		_getwch();
 		exit(EXIT_FAILURE);
 	}
